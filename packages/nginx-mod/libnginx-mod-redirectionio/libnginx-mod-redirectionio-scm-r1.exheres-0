@@ -1,0 +1,18 @@
+# Copyright 2019 RedirectionIO <contact@redirection.io>
+# Distributed under the terms of the MIT License
+
+require github [ user="redirectionio" ]
+
+SUMMARY="RedirectionIO Nginx Module."
+HOMEPAGE="https://github.com/redirectionio/libnginx-mod-redirectionio"
+
+LICENCES="MIT"
+SLOT="0"
+PLATFORMS="~amd64"
+
+DEPENDENCIES="
+    build+run:
+        www-servers/nginx
+"
+
+BUGS_TO="contact@redirection.io"

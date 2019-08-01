@@ -1,0 +1,20 @@
+# Copyright 2019 RedirectionIO <contact@redirection.io>
+# Distributed under the terms of the MIT License
+
+require github [ user="redirectionio" branch="master" force_git_clone=true ]
+require cargo
+
+SUMMARY="RedirectionIO Library."
+HOMEPAGE="https://github.com/redirectionio/libredirectionio"
+
+LICENCES="MIT"
+SLOT="0"
+PLATFORMS="~amd64"
+
+DEPENDENCIES=""
+
+BUGS_TO="contact@redirection.io"
+
+src_compile() {
+    ecargo build --lib --release
+}

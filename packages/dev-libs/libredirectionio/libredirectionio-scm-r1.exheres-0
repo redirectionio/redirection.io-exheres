@@ -12,9 +12,15 @@ SLOT="0"
 PLATFORMS="~amd64"
 
 DEPENDENCIES=""
+EXJOBS="1"
 
 BUGS_TO="contact@redirection.io"
 
 src_compile() {
     ecargo build --lib --release
+}
+
+src_install() {
+    $(exhost --target)
+
 }

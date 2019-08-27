@@ -11,8 +11,14 @@ SLOT="0"
 PLATFORMS="~amd64"
 
 DEPENDENCIES="
+    build:
+        dev-libs/libredirectionio
     build+run:
         www-servers/apache
 "
+
+src_configure() {
+    econf --with-libredirectionio=/
+}
 
 BUGS_TO="contact@redirection.io"

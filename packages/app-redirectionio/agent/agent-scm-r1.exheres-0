@@ -1,0 +1,15 @@
+# Copyright 2019 RedirectionIO <contact@redirection.io>
+# Distributed under the terms of the MIT License
+
+SUMMARY="RedirectionIO Agent."
+HOMEPAGE="https://redirection.io"
+DOWNLOADS="https://packages.redirection.io/dist/1.6.0/redirectionio-agent_1.6.0-1_any_amd64.tar.gz"
+
+LICENCES="MIT"
+SLOT="0"
+PLATFORMS="~amd64"
+
+DEPENDENCIES="
+"
+
+BUGS_TO="contact@redirection.io"

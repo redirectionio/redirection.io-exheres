@@ -13,3 +13,5 @@ RUN chgrp paludisbuild /dev/tty && source /etc/profile && ln -sf /usr/share/zone
 
 RUN cave sync
 RUN cave resolve --recommendations ignore --suggestions ignore -z -1 dev-lang/rust -x
+
+COPY paludis/redirectionio.conf /etc/paludis/repositories/redirectionio.conf

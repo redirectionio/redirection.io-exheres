@@ -1,7 +1,7 @@
 # Copyright 2019 RedirectionIO <contact@redirection.io>
 # Distributed under the terms of the MIT License
 
-require github [ user="redirectionio" ]
+require nginx github [ user="redirectionio" ]
 
 SUMMARY="RedirectionIO Nginx Module."
 HOMEPAGE="https://github.com/redirectionio/libnginx-mod-redirectionio"
@@ -11,8 +11,20 @@ SLOT="0"
 PLATFORMS="~amd64"
 
 DEPENDENCIES="
+    build:
+        dev-libs/libredirectionio
+    built-against:
+        www-servers/nginx
     build+run:
         www-servers/nginx
 "
+
+src_compile() {
+    echo $WORK
+    ls -l $WORK/..
+    ls -l /var/tmp/paludis/build/nginx-mod-libnginx-mod-redirectionio-scm-r1
+    ls -l /var/tmp/paludis/build
+    echo $WORKBASE
+}
 
 BUGS_TO="contact@redirection.io"

@@ -2,7 +2,6 @@
 # Distributed under the terms of the MIT License
 
 require github [ user="redirectionio" branch="master" force_git_clone=true ]
-require cargo
 
 SUMMARY="RedirectionIO Library."
 HOMEPAGE="https://github.com/redirectionio/libredirectionio"
@@ -12,15 +11,11 @@ SLOT="0"
 PLATFORMS="~amd64"
 
 DEPENDENCIES=""
-EXJOBS="1"
+EXJOBS="12"
 
 BUGS_TO="contact@redirection.io"
 
-src_compile() {
-    ecargo build --lib --release
-}
-
-src_install() {
-    $(exhost --target)
-
+src_configure() {
+    autoreconf -i
+    default
 }

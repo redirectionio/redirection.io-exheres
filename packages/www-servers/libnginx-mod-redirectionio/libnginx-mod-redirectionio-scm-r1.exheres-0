@@ -13,10 +13,8 @@ PLATFORMS="~amd64"
 DEPENDENCIES="
     build:
         dev-libs/libredirectionio
-    built-against:
-        www-servers/nginx
     build+run:
-        www-servers/nginx
+        www-servers/nginx[http]
 "
 
 BUGS_TO="contact@redirection.io"

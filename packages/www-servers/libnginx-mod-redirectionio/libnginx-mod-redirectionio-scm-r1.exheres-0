@@ -1,9 +1,9 @@
-# Copyright 2019 RedirectionIO <contact@redirection.io>
+# Copyright 2019 redirection.io <contact@redirection.io>
 # Distributed under the terms of the MIT License
 
 require github [ user="redirectionio" ]
 
-SUMMARY="RedirectionIO Nginx Module."
+SUMMARY="redirection.io Nginx Module."
 HOMEPAGE="https://github.com/redirectionio/libnginx-mod-redirectionio"
 
 LICENCES="MIT"

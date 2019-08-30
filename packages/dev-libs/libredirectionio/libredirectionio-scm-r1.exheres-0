@@ -1,9 +1,9 @@
-# Copyright 2019 RedirectionIO <contact@redirection.io>
+# Copyright 2019 redirection.io <contact@redirection.io>
 # Distributed under the terms of the MIT License
 
 require github [ user="redirectionio" branch="master" force_git_clone=true ]
 
-SUMMARY="RedirectionIO Library."
+SUMMARY="redirection.io proxy and router Library."
 HOMEPAGE="https://github.com/redirectionio/libredirectionio"
 
 LICENCES="MIT"

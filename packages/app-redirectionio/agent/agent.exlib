@@ -1,11 +1,11 @@
-# Copyright 2019 RedirectionIO <contact@redirection.io>
+# Copyright 2019 redirection.io <contact@redirection.io>
 # Distributed under the terms of the MIT License
 
 require systemd-service [ systemd_files=[ "redirection-agent/redirectionio-agent.service" ] ]
 
 export_exlib_phases src_unpack src_install
 
-SUMMARY="RedirectionIO Agent."
+SUMMARY="redirection.io Agent."
 HOMEPAGE="https://redirection.io"
 DOWNLOADS="https://packages.redirection.io/dist/${PV}/redirectionio-agent_${PV}-1_any_amd64.tar.gz"
 

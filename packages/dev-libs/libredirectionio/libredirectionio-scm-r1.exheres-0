@@ -10,8 +10,10 @@ LICENCES="MIT"
 SLOT="0"
 PLATFORMS="~amd64"
 
-DEPENDENCIES=""
-EXJOBS="12"
+DEPENDENCIES="
+    build:
+        dev-lang/rust
+"
 
 BUGS_TO="contact@redirection.io"
 

@@ -19,6 +19,10 @@ DEPENDENCIES="
 
 BUGS_TO="contact@redirection.io"
 
+pkg_setup() {
+    exdirectory --allow /srv/www/nginx/modules
+}
+
 src_configure() {
     autoreconf -i
     default

@@ -4,7 +4,6 @@
 require github [ user="redirectionio" ]
 
 SUMMARY="redirection.io Nginx Module."
-HOMEPAGE="https://github.com/redirectionio/libnginx-mod-redirectionio"
 
 LICENCES="MIT"
 SLOT="0"

@@ -4,7 +4,6 @@
 require github [ user="redirectionio" branch="master" force_git_clone=true ]
 
 SUMMARY="redirection.io proxy and router Library."
-HOMEPAGE="https://github.com/redirectionio/libredirectionio"
 
 LICENCES="MIT"
 SLOT="0"

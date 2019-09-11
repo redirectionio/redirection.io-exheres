@@ -1,7 +1,7 @@
 # Copyright 2019 redirection.io <contact@redirection.io>
 # Distributed under the terms of the MIT License
 
-require github [ user="redirectionio" branch="master" force_git_clone=true ]
+require autotools [ supported_autoconf=[ 2.5 ] supported_automake=[ 1.16 ] ] github [ user="redirectionio" ]
 
 SUMMARY="redirection.io proxy and router Library."
 
@@ -11,12 +11,11 @@ PLATFORMS="~amd64"
 
 DEPENDENCIES="
     build:
-        dev-lang/rust
+        dev-lang/rust:*
 "
 
 BUGS_TO="contact@redirection.io"
 
-src_configure() {
-    autoreconf -i
-    default
+pkg_setup() {
+    exdirectory --allow /srv/www/nginx/modules
 }

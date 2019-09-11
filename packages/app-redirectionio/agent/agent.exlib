@@ -13,7 +13,7 @@ LICENCES="MIT"
 SLOT="0"
 
 DEPENDENCIES="
-    build+run:
+    run:
         group/redirectionio
         user/redirectionio
         sys-apps/systemd
@@ -26,17 +26,14 @@ agent_src_unpack() {
 }
 
 agent_src_install() {
-    local config=/etc/redirectionio
-    local lib=/var/lib/redirectionio
-    local target=/usr/$(exhost --target)/bin
+    insinto /etc/redirectionio
+    doins redirection-agent/agent.yml
 
-    edo mkdir -p "${IMAGE}"/${config}
-    edo mkdir -p "${IMAGE}"/${lib}
-    edo mkdir -p "${IMAGE}"/${target}
+    exeinto /usr/$(exhost --target)/bin
+    doexe redirection-agent/redirectionio-agent
 
-    edo touch "${IMAGE}"/${lib}/.keep
-    edo mv redirection-agent/agent.yml "${IMAGE}"/${config}/agent.yml
-    edo mv redirection-agent/redirectionio-agent "${IMAGE}"/${target}/redirectionio-agent
+    diropts -g redirectionio -o redirectionio
+    keepdir /var/lib/redirectionio
 
     install_systemd_files
 }

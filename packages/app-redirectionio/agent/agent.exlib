@@ -34,6 +34,7 @@ agent_src_install() {
 
     diropts -g redirectionio -o redirectionio
     keepdir /var/lib/redirectionio
+    keepdir /run/redirectionio
 
     install_systemd_files
 }
